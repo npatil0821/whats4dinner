@@ -6,12 +6,14 @@ function NewIngredient(props) {
   function submitHandler(event) {
     event.preventDefault(); //prevents default HTTP request sent by HTML
 
-    const enteredIngredient = ingredientRef.current.value;
     //gets current value of input when form is submitted
+    const enteredIngredient = ingredientRef.current.value;
 
+    //passes new ingredient to function in App.js to be added
     props.onAddIngredient(enteredIngredient);
   }
 
+  //a simple text input and submit button form is rendered
   return (
     <section>
       <h1>Enter Ingredient: </h1>

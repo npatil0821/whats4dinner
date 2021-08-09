@@ -1,5 +1,6 @@
 import Ingredient from "./Ingredient";
 
+//an unordered list is returned. is returned as an Ingredient component
 function IngredientList(props) {
   return (
     <section>
