@@ -8,10 +8,7 @@ function App() {
 
   //adds new ingredients to addedIngredients
   function addIngredientHandler(newIngredient) {
-    const ingredientList = addedIngredients;
-    ingredientList.push(newIngredient);
-
-    setAddedIngredients(ingredientList);
+    setAddedIngredients([...addedIngredients, newIngredient]);
   }
 
   return (
