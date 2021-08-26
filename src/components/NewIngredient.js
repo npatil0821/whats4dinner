@@ -9,6 +9,9 @@ function NewIngredient(props) {
     //gets current value of input when form is submitted
     const enteredIngredient = ingredientRef.current.value;
 
+    //clears input
+    ingredientRef.current.value = "";
+
     //passes new ingredient to function in App.js to be added
     props.onAddIngredient(enteredIngredient);
   }

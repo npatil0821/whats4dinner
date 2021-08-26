@@ -8,7 +8,9 @@ function App() {
 
   //adds new ingredients to addedIngredients
   function addIngredientHandler(newIngredient) {
-    setAddedIngredients([...addedIngredients, newIngredient]);
+    if (!addedIngredients.includes(newIngredient)) {
+      setAddedIngredients([...addedIngredients, newIngredient]);
+    }
   }
 
   return (
