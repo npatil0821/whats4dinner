@@ -13,10 +13,19 @@ function App() {
     }
   }
 
+  //deletes an ingredient
+  function deleteIngredientHandler(ingredient) {
+    //uses filter to return new array of everything !== ingredient
+    setAddedIngredients(addedIngredients.filter((item) => item !== ingredient));
+  }
+
   return (
     <main>
       <NewIngredient onAddIngredient={addIngredientHandler} />
-      <IngredientList ingredients={addedIngredients} />
+      <IngredientList
+        ingredients={addedIngredients}
+        onDeleteIngredient={deleteIngredientHandler}
+      />
     </main>
   );
 }
